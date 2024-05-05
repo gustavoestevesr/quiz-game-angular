@@ -1,0 +1,37 @@
+<!-- FUNDO DE TELA -->
+<main class="bg-screen h-full flex flex-col justify-center items-end">
+  <!-- MENU -->
+  <section class="container-menu flex flex-col justify-center items-center gap-4">
+    <!-- LOGO -->
+    <img src="" alt="" class="logotipo" width="350" height="200">
+    <!-- TITULO -->
+    <h1 class="font-normal">HisthoryGame</h1>
+    <!-- COMEÇAR JOGO -->
+    <button
+      class="botao-menu"
+      mat-raised-button
+      color="primary"
+      (click)="router.navigate(['category'])"
+    >
+      Começar Jogo
+    </button>
+    <!-- AUTORES -->
+    <button
+      class="botao-menu"
+      mat-raised-button
+      color="accent"
+      (click)="router.navigate(['autores'])"
+    >
+      Autores
+    </button>
+    <!-- SOBRE -->
+    <button
+      class="botao-menu"
+      mat-raised-button
+      color="warn"
+      (click)="router.navigate(['sobre'])"
+    >
+      Sobre
+    </button>
+  </section>
+</main>

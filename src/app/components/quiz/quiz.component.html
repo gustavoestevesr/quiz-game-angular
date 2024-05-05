@@ -1,0 +1,61 @@
+<!-- FUNDO DE TELA -->
+<main class="bg-screen h-full">
+  <div class="fundo-preto-degrade flex justify-center items-center">
+    <!-- REGRAS -->
+  <mat-card *ngIf="showWarning" class="w-full max-w-4xl">
+    <mat-card-header>
+      <mat-card-title class="text-lg">Regras do Quiz</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="py-2">
+      <ol class="list-decimal text-base">
+        <li class="list-decimal py-1">
+          A etapa conhecimento é composta por <strong>10 questões</strong> de
+          <strong>raciocínio lógico com peso 2</strong>, e
+          <strong>10 questões</strong> de
+          <strong>interpretação de texto com peso 1</strong>.
+        </li>
+        <li class="list-decimal py-1">
+          O estudante será aprovado mediante a obtenção
+          <strong>mínima de 50%</strong> da nota.
+        </li>
+        <li class="list-decimal py-1">
+          O estudante terá
+          <strong>2 oportunidades, dentro do prazo estabelecido</strong>, para
+          fazer a avaliação on-line.
+        </li>
+        <li class="list-decimal py-1">
+          O tempo destinado para responder a avaliação é de
+          <strong>2 horas</strong>.
+        </li>
+        <li class="list-decimal py-1">
+          A cada oportunidade uma nova prova
+          <strong>com questões aleatórias</strong> será disponibilizada.
+        </li>
+        <li class="list-decimal py-1">
+          O resultado final do estudante será a <strong>média</strong> das duas
+          tentativas.
+        </li>
+        <li class="list-decimal py-1">
+          A avaliação é composta por apenas <strong>questões objetivas</strong>.
+        </li>
+        <li class="list-decimal py-1">
+          Ao clicar em <strong>"Começar Avaliação!"</strong> será registrada
+          <strong>uma tentativa.</strong>
+        </li>
+      </ol>
+    </mat-card-content>
+    <mat-card-actions class="flex justify-end gap-4 py-2 m-2">
+      <button mat-stroked-button (click)="closeDialog()">
+        Voltar
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="startQuiz()"
+      >
+        Vamos lá!
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+</main>
