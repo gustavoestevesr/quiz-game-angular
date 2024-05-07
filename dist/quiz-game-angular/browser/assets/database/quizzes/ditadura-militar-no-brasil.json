@@ -22,13 +22,13 @@
     "reference": "",
     "tip": "<p>LETRA C</p><p>O discurso anterior ao golpe era de que os militares deveriam tomar o poder para “sanear” a república e entregar novamente o poder aos civis — na mesma lógica do que havia acontecido em 1945. Acontece que os militares não estavam dispostos a entregar o poder, pois tinham um projeto de longo prazo com ele.</p>",
     "image": "",
-    "answer": "c) devolvido o poder aos civis por meio de eleições democráticas.",
+    "answer": "c) Devolvido o poder aos civis por meio de eleições democráticas.",
     "options": [
-      "a) criada uma junta militar para fortalecer o Poder do Executivo.",
-      "b) restabelecida a ordem, com a criação do Ato Institucional nº 1.",
-      "c) devolvido o poder aos civis por meio de eleições democráticas.",
-      "d) elaborada uma nova Constituição, dando mais poder ao povo.",
-      "e) ampliados os direitos e deveres políticos com a criação do partido do PTB."
+      "a) Criada uma junta militar para fortalecer o Poder do Executivo.",
+      "b) Restabelecida a ordem, com a criação do Ato Institucional nº 1.",
+      "c) Devolvido o poder aos civis por meio de eleições democráticas.",
+      "d) Elaborada uma nova Constituição, dando mais poder ao povo.",
+      "e) Ampliados os direitos e deveres políticos com a criação do partido do PTB."
     ]
   },
   {
@@ -38,12 +38,12 @@
     "reference": "NAPOLITANO, M. 1964: História do Regime Militar Brasileiro. São Paulo, SP: Contexto, 2014. p.62.",
     "tip": "<p>LETRA D</p><p>O pacote de abril foi um conjunto de medidas tomadas pelo governo de Ernesto Geisel em 1977 e tinha como objetivo realizar mudanças pontuais no país, de forma a sustentar os militares no poder em um cenário de crescente oposição à ditadura. Entre as medidas tomadas, estavam o aumento do mandato presidencial de cinco para seis anos.</p>",
     "image": "",
-    "answer": "d) ao Pacote de Abril, editado durante o governo Geisel para limitar a atuação da oposição ao governo.",
+    "answer": "d) Ao Pacote de Abril, editado durante o governo Geisel para limitar a atuação da oposição ao governo.",
     "options": [
-      "a) ao Plano Trienal, que procurou acabar com o crescimento político da Arena nas esferas estadual e municipal.",
-      "b) à Operação Condor, que ocasionou a cassação dos mandatos dos parlamentares do MDB.",
-      "c) ao Ato Institucional número 4, que estabeleceu eleições indiretas em todas as esferas políticas.",
-      "d) ao Pacote de Abril, editado durante o governo Geisel para limitar a atuação da oposição ao governo.",
+      "a) Ao Plano Trienal, que procurou acabar com o crescimento político da Arena nas esferas estadual e municipal.",
+      "b) À Operação Condor, que ocasionou a cassação dos mandatos dos parlamentares do MDB.",
+      "c) Ao Ato Institucional número 4, que estabeleceu eleições indiretas em todas as esferas políticas.",
+      "d) Ao Pacote de Abril, editado durante o governo Geisel para limitar a atuação da oposição ao governo.",
       "e) Nenhuma das alternativas acima."
     ]
   },
@@ -70,13 +70,13 @@
     "tip": "<p>LETRA B</p><p>O golpe civil-militar de 1964 destituiu João Goulart da presidência do Brasil. Esse político tinha assumido a presidência em 1961, depois que Jânio Quadros renunciou ao cargo. Jango tornou-se presidente porque era vice de Quadros, e a Constituição de 1946 determinava que o vice sucederia o poder em caso de renúncia do presidente.</p>",
     "reference": "",
     "image": "",
-    "answer": "b) I, II, III e lV.",
+    "answer": "b) João Goulart",
     "options": [
-      "a) Jânio Quadros.",
-      "b) João Goulart.",
-      "c) I e IV, apenas.",
-      "d) I, II e IV, apenas.",
-      "e) Todas as alternativas estão incorretas."
+      "a) Jânio Quadros",
+      "b) João Goulart",
+      "c) Getúlio Vargas",
+      "d) Juscelino Kubitschek",
+      "e) Café Filho"
     ]
   },
   {
@@ -125,6 +125,70 @@
       "c) Brasília",
       "d) Porto Alegre",
       "e) Juiz de Fora"
+    ]
+  },
+  {
+    "numb": 9,
+    "question": "Assinale a alternativa correta.",
+    "subQuestion": "Qual foi o primeiro presidente brasileiro após o término da Ditadura Militar:",
+    "tip": "<p>LETRA D</p><p>O primeiro presidente do Brasil após 21 anos de Ditadura Militar foi José Sarney. Ele assumiu a presidência por conta dos problemas de saúde de Tancredo Neves, que, embora eleito em 1985, nunca assumiu o cargo. O governo de José Sarney foi, no mínimo, turbulento.</p>",
+    "reference": "",
+    "image": "",
+    "answer": "d) José Sarney",
+    "options": [
+      "a) Tancredo Neves",
+      "b) Fernando Collor",
+      "c) João Figueiredo",
+      "d) José Sarney",
+      "e) Ulisses Guimarães"
+    ]
+  },
+  {
+    "numb": 10,
+    "question": "Assinale a alternativa correta.",
+    "subQuestion": "Os dois partidos que existiram durante boa parte da Ditadura Militar foram:",
+    "tip": "<p>LETRA C</p><p>Durante o período do bipartidarismo, os dois partidos existentes no Brasil foram a Aliança Renovadora Nacional, a Arena, que representava os militares, e o Movimento Democrático Brasil, o MDB, entendido como oposição consentida.</p>",
+    "reference": "",
+    "image": "",
+    "answer": "c) MDB e Arena",
+    "options": [
+      "a) UDN e Arena",
+      "b) PSD e PTB",
+      "c) MDB e Arena",
+      "d) PT e PDS",
+      "e) PMDB e PSDB"
+    ]
+  },
+  {
+    "numb": 11,
+    "question": "Assinale a alternativa correta.",
+    "subQuestion": "A Frente Ampla foi um movimento de oposição à ditadura formado por um político conservador que havia apoiado o golpe civil-militar de 1964. Estamos falando de:",
+    "tip": "<p>LETRA E</p><p>A Frente Ampla foi um movimento de oposição à Ditadura Militar formado por Carlos Lacerda, em 1966. Esse político estava insatisfeito com a ditadura depois que foi cancelada a eleição presidencial de 1965 (e na qual ele concorreria). A Frente Ampla reuniu políticos como João Goulart e JK, mas não durou muito, pois foi proibida de atuar no país pelos militares.</p>",
+    "reference": "",
+    "image": "",
+    "answer": "e) Carlos Lacerda",
+    "options": [
+      "a) Auro de Moura",
+      "b) Magalhães Pinto",
+      "c) Jânio Quadros",
+      "d) Tancredo Neves",
+      "e) Carlos Lacerda"
+    ]
+  },
+  {
+    "numb": 12,
+    "question": "Assinale a alternativa correta.",
+    "subQuestion": "A reunião que deu origem ao Ato Institucional nº 5, em 1968, recebeu qual nome:",
+    "tip": "<p>LETRA C</p><p>A reunião que definiu o anúncio do AI-5 foi chamada pelo jornalista Elio Gaspari de Missa Negra. Esse ato foi definido pelos participantes da reunião como a imposição de uma real ditadura no Brasil, e, de fato, o AI-5 iniciou o período de maior repressão da Ditadura Militar aqui.</p>",
+    "reference": "",
+    "image": "",
+    "answer": "b) Missa Negra",
+    "options": [
+      "a) Mergulho Profundo",
+      "b) Missa Negra",
+      "c) Anos de Chumbo",
+      "d) Hora mais Escura",
+      "e) Nenhuma das alternativas acima"
     ]
   }
 ]
