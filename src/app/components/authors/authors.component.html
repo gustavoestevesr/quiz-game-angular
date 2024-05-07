@@ -29,18 +29,28 @@
 <!-- FUNDO DE TELA -->
 <main class="bg-screen">
   <!-- FUNDO PRETO -->
-  <div class="fundo-preto-degrade py-4">
+  <div class="fundo-preto-degrade">
     <!-- LISTA DE CARDS -->
-    <section class="flex flex-row justify-center items-center">
+    <section class="section-cards flex flex-row justify-center items-center">
       <!-- CARD GUSTAVO -->
       <mat-card class="mat-card-autor" *ngFor="let autor of AUTORES">
-        <img class="img-autor" matCardImage src="./../../../assets/autores/gustavo.png" />
+        <img
+          class="img-autor"
+          matCardImage
+          src="./../../../assets/autores/gustavo.png"
+        />
         <mat-card-header class="flex">
           <mat-card-title> {{ autor.titulo }} </mat-card-title>
           <mat-card-subtitle> {{ autor.subTitulo }} </mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content> <p class="text-justify">{{ autor.conteudo }}</p> </mat-card-content>
-        <mat-card-footer class="ms-4"> <p><a [href]="autor.rodape">{{ autor.rodape }}</a></p> </mat-card-footer>
+        <mat-card-content>
+          <p class="text-justify">{{ autor.conteudo }}</p>
+        </mat-card-content>
+        <mat-card-footer class="ms-4">
+          <p>
+            <a [href]="autor.rodape">{{ autor.rodape }}</a>
+          </p>
+        </mat-card-footer>
       </mat-card>
     </section>
   </div>

@@ -3,12 +3,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
-  height: 100vw;
+  height: 100vh;
 }
 
 .fundo-preto-degrade {
   background-color: rgba($color: #000000, $alpha: 0.3);
-  height: 100vw;
+  height: 100vh;
 }
 
 .toolbar-spacer {
@@ -16,15 +16,24 @@
 }
 
 .mat-card-autor {
-  box-shadow: 5px 5px 5px 1px #F44336;
+  box-shadow: 5px 5px 5px #F44336;
   background-color: wheat;
   width: 100%;
   max-width: 600px;
   padding: 1rem;
 }
 
+.mat-card-autor:hover {
+  transition: ease-in-out 0.2s;
+  scale: (1.05);
+}
+
 .img-autor {
   width: 100%;
   max-width: 200px;
   margin: auto;
+}
+
+.section-cards {
+  height: 90vh;
 }
