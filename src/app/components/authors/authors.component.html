@@ -1,1 +1,47 @@
-<p>authors works!</p>
+<!-- TOOLBAR -->
+<mat-toolbar color="warn">
+  <span>HisthoryGame</span>
+  <span class="toolbar-spacer"></span>
+  <button
+    mat-icon-button
+    class="icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>share</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="icon"
+    aria-label="Example icon-button with share icon"
+    (click)="router.navigate([''])"
+  >
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- FUNDO DE TELA -->
+<main class="bg-screen">
+  <!-- FUNDO PRETO -->
+  <div class="fundo-preto-degrade py-4">
+    <!-- LISTA DE CARDS -->
+    <section class="flex flex-row justify-center items-center">
+      <!-- CARD GUSTAVO -->
+      <mat-card class="mat-card-autor" *ngFor="let autor of AUTORES">
+        <img class="img-autor" matCardImage src="./../../../assets/autores/gustavo.png" />
+        <mat-card-header class="flex">
+          <mat-card-title> {{ autor.titulo }} </mat-card-title>
+          <mat-card-subtitle> {{ autor.subTitulo }} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content> <p class="text-justify">{{ autor.conteudo }}</p> </mat-card-content>
+        <mat-card-footer class="ms-4"> <p><a [href]="autor.rodape">{{ autor.rodape }}</a></p> </mat-card-footer>
+      </mat-card>
+    </section>
+  </div>
+</main>
