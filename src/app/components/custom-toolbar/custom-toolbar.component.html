@@ -1,0 +1,23 @@
+<mat-toolbar color="warn">
+  <span>HisthoryGame</span>
+
+  <span class="toolbar-spacer"></span>
+
+  <button
+    mat-icon-button
+    class="icon"
+    aria-label="star_rate"
+    matTooltip="Emblemas"
+  >
+    <mat-icon>star_rate</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="icon"
+    aria-label="exit_to_app"
+    matTooltip="Sair"
+    (click)="router.navigate([''])"
+  >
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
