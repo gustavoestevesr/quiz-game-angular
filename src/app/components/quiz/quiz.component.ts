@@ -6,9 +6,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subject, catchError, takeUntil } from 'rxjs';
+import JSConfetti from 'js-confetti';
+import { ToastrService } from 'ngx-toastr';
+import { Subject, takeUntil } from 'rxjs';
 import { TipQuizComponent } from '../../dialogs/tip-quiz/tip-quiz.component';
-import JSConfetti from 'js-confetti'
+
 @Component({
   selector: 'app-quiz',
   standalone: true,
@@ -43,6 +45,7 @@ export class QuizComponent implements OnInit, OnDestroy {
   public activatedRoute = inject(ActivatedRoute);
   private http = inject(HttpClient);
   private dialog = inject(MatDialog);
+  private toastr = inject(ToastrService);
 
   ngOnInit() {
     this.getNomeQuiz();
@@ -62,8 +65,8 @@ export class QuizComponent implements OnInit, OnDestroy {
   }
 
   lancarConfete() {
-    const jsConfetti = new JSConfetti()
-    jsConfetti.addConfetti()
+    const jsConfetti = new JSConfetti();
+    jsConfetti.addConfetti();
   }
 
   nextQuestion() {
@@ -107,13 +110,16 @@ export class QuizComponent implements OnInit, OnDestroy {
   carregarQuestoesQuiz(nomeQuiz: string) {
     this.http
       .get(`../../../assets/database/quizzes/${nomeQuiz}.json`)
-      .pipe(
-        takeUntil(this.unsubscribeAll),
-        catchError(() => {
-          return this.router.navigate(['inicio']);
-        })
-      )
+      .pipe(takeUntil(this.unsubscribeAll))
       .subscribe((res: any) => {
+        if (!res) {
+          this.toastr.warning('Quiz ainda em desenvolvimento.', 'Atenção!', {
+            progressBar: true,
+            timeOut: 5000,
+          });
+          this.router.navigate(['inicio']);
+        }
+
         this.embaralharLista(res);
         this.listaQuestoes = res;
         this.mostrarCardRegras = true;
