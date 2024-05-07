@@ -1,20 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbar, MatToolbarModule } from '@angular/material/toolbar';
-import { Router } from '@angular/router';
+import { CustomToolbarComponent } from '../custom-toolbar/custom-toolbar.component';
 
 @Component({
   selector: 'app-authors',
   standalone: true,
-  imports: [CommonModule, MatToolbarModule, MatButtonModule, MatCardModule, MatIconModule],
+  imports: [CommonModule, MatButtonModule, MatCardModule, CustomToolbarComponent],
   templateUrl: './authors.component.html',
   styleUrl: './authors.component.scss'
 })
 export class AuthorsComponent {
-
   AUTORES = [
     {
       titulo: 'Gustavo Esteves Rocha',
@@ -23,6 +20,4 @@ export class AuthorsComponent {
       rodape: 'https://www.linkedin.com/in/gustavoestevesr/'
     }
   ]
-
-  public router = inject(Router);
 }
