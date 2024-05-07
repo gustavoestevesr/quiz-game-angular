@@ -1,17 +1,27 @@
 .bg-screen {
-  background-image: url('./../../../assets/background/compass-3408928_1920.jpg');
+  background-image: url("./../../../assets/background/compass-3408928_1920.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
+  height: 100vw;
 }
 
-.container-menu {
+.fundo-preto-degrade {
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  height: 100vw;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-card {
+  background-color: wheat;
   width: 100%;
-  height: 450px;
-  max-width: 350px;
+  max-width: 425px;
 }
 
-.botao-menu {
-  width: 250px;
-  height: 40px;
+.mat-card:hover {
+  transition: ease-in-out 0.2s;
+  scale: (1.05);
 }

@@ -1,12 +1,37 @@
 .bg-screen {
-  background-image: url('./../../../assets/background/compass-3408928_1920.jpg');
+  background-image: url("./../../../assets/background/compass-3408928_1920.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
+  height: 100%;
+  width: 100%;
 }
 
 .fundo-preto-degrade {
   background-color: rgba($color: #000000, $alpha: 0.75);
   width: 100%;
   height: 100%;
+}
+
+.card-regras,
+.card-quiz,
+.card-resultado {
+  background-color: wheat;
+}
+
+.espacador {
+  flex: 1 1 auto;
+}
+
+.alternativa-selecionada {
+  background-color: #f44336;
+  color: white !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-justify {
+  text-align: justify !important;
 }

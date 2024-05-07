@@ -1,0 +1,9 @@
+<main class="tipd-dialog max-w-xl">
+  <h2 mat-dialog-title>Feedback</h2>
+<mat-dialog-content>
+  <p [innerHTML]="data.tip"></p>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end mr-2">
+  <button mat-raised-button color="warn" [mat-dialog-close]="true" cdkFocusInitial>Confirmar</button>
+</mat-dialog-actions>
+</main>

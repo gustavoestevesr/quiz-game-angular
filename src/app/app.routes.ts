@@ -3,30 +3,30 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./components/home/home.component').then((c) => c.HomeComponent)
+    loadComponent: () => import('./components/start/start.component').then((c) => c.StartComponent)
   },
-  /*{
-    path: '',
-    loadComponent: () => import('./components/home/home.component').then((c) => c.HomeComponent)
-  },*/
   {
-    path: 'category',
-    loadComponent: () => import('./components/category/category.component').then((c) => c.CategoryComponent)
+    path: 'autores',
+    loadComponent: () => import('./components/authors/authors.component').then((c) => c.AuthorsComponent)
+  },
+  {
+    path: 'sobre',
+    loadComponent: () => import('./components/about/about.component').then((c) => c.AboutComponent)
+  },
+  {
+    path: 'inicio',
+    loadComponent: () => import('./components/home/home.component').then((c) => c.HomeComponent)
   },
   {
     path: 'quiz',
     loadComponent: () => import('./components/quiz/quiz.component').then((c) => c.QuizComponent),
   },
   {
-    path: 'result',
-    loadComponent: () => import('./components/result/result.component').then((c) => c.ResultComponent)
-  },
-  {
-    path: 'highscore',
+    path: 'ranking',
     loadComponent: () => import('./components/highscore/highscore.component').then((c) => c.HighscoreComponent)
   },
   {
-    path: 'badges',
+    path: 'conquistas',
     loadComponent: () => import('./components/badges/badges.component').then((c) => c.BadgesComponent)
   },
 ];

@@ -1,61 +1,140 @@
 <!-- FUNDO DE TELA -->
 <main class="bg-screen h-full">
+  <!-- FUNDO PRETO -->
   <div class="fundo-preto-degrade flex justify-center items-center">
     <!-- REGRAS -->
-  <mat-card *ngIf="showWarning" class="w-full max-w-4xl">
-    <mat-card-header>
-      <mat-card-title class="text-lg">Regras do Quiz</mat-card-title>
-    </mat-card-header>
-    <mat-card-content class="py-2">
-      <ol class="list-decimal text-base">
-        <li class="list-decimal py-1">
-          A etapa conhecimento é composta por <strong>10 questões</strong> de
-          <strong>raciocínio lógico com peso 2</strong>, e
-          <strong>10 questões</strong> de
-          <strong>interpretação de texto com peso 1</strong>.
-        </li>
-        <li class="list-decimal py-1">
-          O estudante será aprovado mediante a obtenção
-          <strong>mínima de 50%</strong> da nota.
-        </li>
-        <li class="list-decimal py-1">
-          O estudante terá
-          <strong>2 oportunidades, dentro do prazo estabelecido</strong>, para
-          fazer a avaliação on-line.
-        </li>
-        <li class="list-decimal py-1">
-          O tempo destinado para responder a avaliação é de
-          <strong>2 horas</strong>.
-        </li>
-        <li class="list-decimal py-1">
-          A cada oportunidade uma nova prova
-          <strong>com questões aleatórias</strong> será disponibilizada.
-        </li>
-        <li class="list-decimal py-1">
-          O resultado final do estudante será a <strong>média</strong> das duas
-          tentativas.
-        </li>
-        <li class="list-decimal py-1">
-          A avaliação é composta por apenas <strong>questões objetivas</strong>.
-        </li>
-        <li class="list-decimal py-1">
-          Ao clicar em <strong>"Começar Avaliação!"</strong> será registrada
-          <strong>uma tentativa.</strong>
-        </li>
-      </ol>
-    </mat-card-content>
-    <mat-card-actions class="flex justify-end gap-4 py-2 m-2">
-      <button mat-stroked-button (click)="closeDialog()">
-        Voltar
-      </button>
-      <button
-        mat-raised-button
-        color="primary"
-        (click)="startQuiz()"
-      >
-        Vamos lá!
-      </button>
-    </mat-card-actions>
-  </mat-card>
+    <mat-card *ngIf="mostrarCardRegras" class="card-regras w-full max-w-4xl">
+      <mat-card-header>
+        <mat-card-title class="text-lg">Regras do Quiz</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="py-2">
+        <ol class="list-decimal text-base">
+          <li class="list-decimal py-1">
+            O quiz é composto por 10 à 20 questões sobre o tema: {{ nomeQuiz }}.
+          </li>
+          <li class="list-decimal py-1">
+            O quiz é composta por apenas questões objetivas.
+          </li>
+          <li class="list-decimal py-1">
+            Não existe média classificatória para prosseguir, na verdade você
+            pode jogar quantas vezes quiser.
+          </li>
+          <li class="list-decimal py-1">
+            A cada partida realizada as questões do quiz são embaralhadas para
+            criar um ambiente mais desafiador.
+          </li>
+          <li class="list-decimal py-1">
+            O tempo destinado para responder o quiz é de 2 min.
+          </li>
+          <li class="list-decimal py-1">
+            O resultado final do jogador será apresentado o número de acertos, o
+            tempo realizado e as conquistas desbloqueadas.
+          </li>
+          <li class="list-decimal py-1">
+            Ao clicar em"Vamos lá!" será iniciado o Quiz.
+          </li>
+        </ol>
+      </mat-card-content>
+      <mat-card-actions class="flex justify-end gap-4 py-2 m-2">
+        <button mat-stroked-button (click)="voltarTela()">Voltar</button>
+        <button mat-raised-button color="warn" (click)="iniciarQuiz()">
+          Vamos lá!
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- QUIZ -->
+    <ng-container *ngIf="comecouQuiz">
+      <mat-card class="card-quiz w-full max-w-5xl">
+        <mat-card-header>
+          <mat-card-title class="text-lg"> {{ nomeQuiz }} </mat-card-title>
+          <div class="espacador"></div>
+          <div
+            class="flex justify-between items-center bg-red-300 rounded-lg p-2"
+          >
+            <mat-icon class="text-base">timer</mat-icon>
+            <span>{{ formatarTemporizador(tempoRestante) }}</span>
+          </div>
+        </mat-card-header>
+
+        <mat-card-content *ngIf="comecouQuiz">
+          <div class="text-base" *ngIf="listaQuestoes[numeroQuestaoAtual]">
+            <p class="text-base">
+              {{ numeroQuestaoAtual + 1 }}.
+              {{ listaQuestoes[numeroQuestaoAtual].question }}
+            </p>
+            <p
+              class="text-justify"
+              [innerHTML]="listaQuestoes[numeroQuestaoAtual].subQuestion"
+            ></p>
+            <p [hidden]="!listaQuestoes[numeroQuestaoAtual].image">
+              <img
+                [src]="listaQuestoes[numeroQuestaoAtual].image"
+                alt="Imagem da questão"
+                width="400"
+                height="250"
+                style="margin: auto"
+              />
+            </p>
+          </div>
+          <div *ngIf="listaQuestoes[numeroQuestaoAtual]">
+            <div
+              *ngFor="let option of listaQuestoes[numeroQuestaoAtual].options"
+              (click)="opcaoSelecionada = option"
+            >
+              <button
+                class="my-1 w-full"
+                mat-stroked-button
+                [ngClass]="{
+                  'alternativa-selecionada':
+                    opcaoSelecionada && opcaoSelecionada === option
+                }"
+              >
+                {{ option }}
+              </button>
+            </div>
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions class="flex justify-end mr-2">
+          <p class="fw-normal ms-4">
+            {{ numeroQuestaoAtual + 1 }} de {{ listaQuestoes.length }} questões
+          </p>
+          <div class="espacador"></div>
+          <button
+            [disabled]="opcaoSelecionada.length === 0"
+            mat-raised-button
+            color="warn"
+            (click)="nextQuestion()"
+          >
+            {{
+              numeroQuestaoAtual + 1 === listaQuestoes.length
+                ? "Finalizar"
+                : "Próximo"
+            }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
+
+    <!-- RESULTADO -->
+    <ng-container *ngIf="!comecouQuiz && !mostrarCardRegras">
+      <mat-card class="card-resultado w-full max-w-2xl">
+        <mat-card-header>
+          <mat-card-title class="text-lg">Quiz Concluído!</mat-card-title>
+          <mat-card-subtitle>{{ nomeQuiz }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="py-2">
+          <p class="text-base">{{ mensagensResultado[0] }}</p>
+          <p class="text-base">{{ mensagensResultado[1] }}</p>
+          <p class="text-base">{{ mensagensResultado[2] }}</p>
+        </mat-card-content>
+        <mat-card-actions class="flex justify-end mr-2 mt-2">
+          <button mat-raised-button color="warn" (click)="voltarTela()">
+            Confirmar
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
   </div>
 </main>

@@ -1,37 +1,57 @@
+<!-- TOOLBAR -->
+<mat-toolbar color="warn">
+  <span>HisthoryGame</span>
+  <span class="toolbar-spacer"></span>
+  <button
+    mat-icon-button
+    class="icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>share</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="icon"
+    aria-label="Example icon-button with share icon"
+    (click)="router.navigate([''])"
+  >
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
 <!-- FUNDO DE TELA -->
-<main class="bg-screen h-full flex flex-col justify-center items-end">
-  <!-- MENU -->
-  <section class="container-menu flex flex-col justify-center items-center gap-4">
-    <!-- LOGO -->
-    <img src="" alt="" class="logotipo" width="350" height="200">
-    <!-- TITULO -->
-    <h1 class="font-normal">HisthoryGame</h1>
-    <!-- COMEÇAR JOGO -->
-    <button
-      class="botao-menu"
-      mat-raised-button
-      color="primary"
-      (click)="router.navigate(['category'])"
-    >
-      Começar Jogo
-    </button>
-    <!-- AUTORES -->
-    <button
-      class="botao-menu"
-      mat-raised-button
-      color="accent"
-      (click)="router.navigate(['autores'])"
-    >
-      Autores
-    </button>
-    <!-- SOBRE -->
-    <button
-      class="botao-menu"
-      mat-raised-button
-      color="warn"
-      (click)="router.navigate(['sobre'])"
-    >
-      Sobre
-    </button>
-  </section>
+<main class="bg-screen">
+  <!-- FUNDO PRETO -->
+  <div
+    class="fundo-preto-degrade"
+  >
+
+  <!-- FILTROS -->
+
+  <!-- QUIZZES -->
+    <section class="flex flex-row justify-center items-center flex-wrap gap-5 py-4">
+      <mat-card class="mat-card" *ngFor="let quiz of LISTA_QUIZZES">
+        <mat-card-header class="flex">
+          <img class="pt-2 ps-2" matCardImage [src]="quiz.icone" width="100" />
+          <div class="ps-2">
+            <mat-card-title>{{ quiz.nome }}</mat-card-title>
+          <mat-card-subtitle>Subtitle</mat-card-subtitle>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-justify"> {{ limitarTexto(quiz.descricao, 150) }} </p>
+        </mat-card-content>
+        <mat-card-actions class="flex justify-end">
+          <button mat-raised-button color="warn" (click)="navegarQuiz(quiz.caminho)">Jogar</button>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+  </div>
 </main>
