@@ -76,7 +76,7 @@ export class QuizComponent implements OnInit, OnDestroy {
       },
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
+    dialogRef.afterClosed().pipe(takeUntil(this.unsubscribeAll)).subscribe((result) => {
       // Verifica se a resposta está correta
       if (this.checkAnswer(this.opcaoSelecionada)) {
         this.correctAnswerCount++;
