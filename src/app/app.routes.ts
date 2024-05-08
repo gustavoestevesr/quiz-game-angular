@@ -26,7 +26,7 @@ export const routes: Routes = [
     loadComponent: () => import('./components/highscore/highscore.component').then((c) => c.HighscoreComponent)
   },
   {
-    path: 'conquistas',
+    path: 'emblemas',
     loadComponent: () => import('./components/badges/badges.component').then((c) => c.BadgesComponent)
   },
 ];
