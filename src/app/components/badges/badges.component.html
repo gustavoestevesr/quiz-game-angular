@@ -1,1 +1,22 @@
-<p>badges works!</p>
+<!-- TOOLBAR -->
+<app-custom-toolbar></app-custom-toolbar>
+
+<!-- FUNDO DE TELA -->
+<main class="bg-screen">
+  <!-- FUNDO PRETO -->
+  <div class="fundo-preto-degrade">
+    <!-- LISTA DE CARDS -->
+    <section class="flex flex-row justify-center items-center gap-16 py-4">
+      <!-- CARD SOBRE -->
+      <mat-card class="mat-card-badge" *ngFor="let emblema of LISTA_EMBLEMAS">
+        <img
+          matCardImage
+          [src]="emblema.caminho"
+          class="icone-img"
+          [ngClass]="{'bloqueado': emblema.bloqueado}"
+          [matTooltip]="emblema.nome"
+        />
+      </mat-card>
+    </section>
+  </div>
+</main>
