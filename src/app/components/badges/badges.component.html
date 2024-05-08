@@ -8,7 +8,7 @@
     <!-- LISTA DE CARDS -->
     <section class="flex flex-row justify-center items-center gap-16 py-4">
       <!-- CARD SOBRE -->
-      <mat-card class="mat-card-badge" *ngFor="let emblema of LISTA_EMBLEMAS">
+      <mat-card class="mat-card-badge" [ngClass]="{'bloqueado': emblema.bloqueado}" *ngFor="let emblema of LISTA_EMBLEMAS">
         <img
           matCardImage
           [src]="emblema.caminho"
