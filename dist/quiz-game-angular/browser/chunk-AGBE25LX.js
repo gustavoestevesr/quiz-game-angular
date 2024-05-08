@@ -1,1 +1,0 @@
-import{Kb as i,Pb as s,ha as o,tb as a,ub as r}from"./chunk-2WNZ7AJ3.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-authors"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,c){n&1&&(a(0,"p"),i(1,"authors works!"),r())}});let t=e;return t})();export{d as AuthorsComponent};

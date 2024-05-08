@@ -10,7 +10,7 @@ License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @angular/cdk
+Package: @angular/material
 License: "MIT"
 
 The MIT License
@@ -36,12 +36,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 --------------------------------------------------------------------------------
-Package: @angular/forms
-License: "MIT"
-
-
---------------------------------------------------------------------------------
-Package: @angular/material
+Package: @angular/cdk
 License: "MIT"
 
 The MIT License
