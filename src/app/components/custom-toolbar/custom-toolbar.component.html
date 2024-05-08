@@ -1,16 +1,18 @@
 <mat-toolbar color="warn">
-  <span>HisthoryGame</span>
+  <section class="logotipo">
+    <span>HisthoryGame</span>
+  </section>
+
+  <section class="router-links flex justify-center items-center gap-4">
+    <button mat-button class="text-base" (click)="router.navigate(['inicio'])">Inicio</button>
+    <button mat-button class="text-base" (click)="router.navigate(['emblemas'])">Emblemas</button>
+    <button mat-button class="text-base" (click)="router.navigate(['ranking'])">Ranking</button>
+    <button mat-button class="text-base" (click)="router.navigate(['autores'])">Autores</button>
+    <button mat-button class="text-base" (click)="router.navigate(['sobre'])">Sobre</button>
+  </section>
 
   <span class="toolbar-spacer"></span>
 
-  <button
-    mat-icon-button
-    class="icon"
-    aria-label="star_rate"
-    matTooltip="Emblemas"
-  >
-    <mat-icon>star_rate</mat-icon>
-  </button>
   <button
     mat-icon-button
     class="icon"
