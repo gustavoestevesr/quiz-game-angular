@@ -10,6 +10,7 @@ import JSConfetti from 'js-confetti';
 import { ToastrService } from 'ngx-toastr';
 import { Subject, takeUntil } from 'rxjs';
 import { TipQuizComponent } from '../../dialogs/tip-quiz/tip-quiz.component';
+import { EmblemaModel, LISTA_EMBLEMAS } from '../../models/EmblemaModel.model';
 
 @Component({
   selector: 'app-quiz',
@@ -76,20 +77,32 @@ export class QuizComponent implements OnInit, OnDestroy {
       },
     });
 
-    dialogRef.afterClosed().pipe(takeUntil(this.unsubscribeAll)).subscribe((result) => {
-      // Verifica se a resposta está correta
-      if (this.checkAnswer(this.opcaoSelecionada)) {
-        this.correctAnswerCount++;
-        this.lancarConfete();
-      }
-      // Verifica se é a última questão
-      if (this.numeroQuestaoAtual < this.listaQuestoes.length - 1) {
-        this.numeroQuestaoAtual++;
-        this.opcaoSelecionada = '';
-      } else {
-        this.finalizarQuiz();
-      }
-    });
+    dialogRef
+      .afterClosed()
+      .pipe(takeUntil(this.unsubscribeAll))
+      .subscribe((result) => {
+        // Verifica se a resposta está correta
+        if (this.checkAnswer(this.opcaoSelecionada)) {
+          this.correctAnswerCount++;
+          this.lancarConfete();
+        }
+        // Verifica se é a última questão
+        if (this.numeroQuestaoAtual < this.listaQuestoes.length - 1) {
+          this.numeroQuestaoAtual++;
+          this.opcaoSelecionada = '';
+        } else {
+          this.finalizarQuiz();
+        }
+      });
+  }
+
+  habilitarEmblema() {
+    const emblema = LISTA_EMBLEMAS.find((emblema: EmblemaModel) =>
+      emblema.nome.includes(this.nomeQuiz)
+    );
+    if (emblema) {
+      emblema.bloqueado = false;
+    }
   }
 
   setResultado() {
@@ -145,6 +158,7 @@ export class QuizComponent implements OnInit, OnDestroy {
   finalizarQuiz(): void {
     clearInterval(this.intervaloTempo);
     this.setResultado();
+    this.habilitarEmblema();
     this.comecouQuiz = false;
   }
 
