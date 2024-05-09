@@ -1,0 +1,34 @@
+[
+  {
+    "numb": 1,
+    "question": "(Enem/2019) A depressão que afetou a economia mundial entre 1929 e 1934 se anunciou, ainda em 1928, por uma queda generalizada nos preços agrícolas internacionais. Mas o fator mais marcante foi a crise financeira detonada pela quebra da Bolsa de Nova Iorque.",
+    "subQuestion": "Perante o cenário econômico descrito, o Estado brasileiro assume, a partir de 1930, uma política de incentivo à:",
+    "reference": "Disponível em: http://cpdoc.fgv.br. Acesso em: 20 abr. 2015 (adaptado).",
+    "tip": "<p>LETRA A</p><p>Um dos efeitos da Crise de 1929 no Brasil foi a redução da exportação de café, o artigo mais importante de nossa economia. Isso impactou diretamente na economia brasileira porque limitou a entrada de dividendos e reduziu a capacidade de importações que nosso país poderia fazer. Assim, era necessário diversificar a economia nacional de forma a produzir aqui o que não mais poderia ser comprado do exterior. Além disso, a industrialização fazia parte da política econômica de Vargas, defensor da intervenção estatal na economia, uma vez que ele tinha uma proposta econômica nacionalista. O resultado disso foi que, entre 1933 e 1939, a indústria brasileira cresceu 11,2%.</p>",
+    "image": "",
+    "answer":  "a) Industrialização interna para substituir as importações.",
+    "options": [
+      "a) Industrialização interna para substituir as importações.",
+      "b) Nacionalização de empresas estrangeiras atingidas pela crise.",
+      "c) Venda de terras a preços acessíveis para os pequenos produtores.",
+      "d) Entrada de imigrantes para trabalhar nas indústrias de base recém-criadas.",
+      "e) Abertura de linhas de financiamento especial para empresas do setor terciário."
+    ]
+  },
+  {
+    "numb": 2,
+    "question": "O marco inicial das discussões parlamentares em torno do direito do voto feminino são os debates que antecederam a Constituição de 1824, que não trazia qualquer impedimento ao exercício dos direitos políticos por mulheres, mas, por outro lado, também não era explícita quanto à possibilidade desse exercício. Foi somente em 1932, dois anos antes de estabelecido o voto aos 18 anos, que as mulheres obtiveram o direito de votar, o que veio a concretizar-se no ano seguinte. Isso ocorreu a partir da aprovação do Código Eleitoral de 1932.",
+    "subQuestion": "Um dos fatores que contribuíram para a efetivação da medida mencionada no texto foi a:",
+    "reference": "Disponível em: http://tse.jusbrasil.com.br. Acesso em: 14 maio 2018.",
+    "tip": "<p>LETRA E</p><p>A reforma no sistema eleitoral brasileiro foi uma das respostas de Getúlio Vargas para a pressão que ele sofria pela constitucionalização do país e pela realização de eleição presidencial. Essa pressão vinha sobretudo de São Paulo, o estado que mais perdeu poder político com a ascensão de Vargas à presidência. Além disso, havia uma grande campanha para que a cidadania brasileira, isto é, o direito ao voto, se estendesse às mulheres também. A feminista Bertha Luz foi um dos grandes nomes no Brasil a lutar pelo direito do voto para as mulheres.</p>",
+    "image": "",
+    "answer":  "e) Campanha de extensão da cidadania.",
+    "options": [
+      "a) Superação da cultura patriarcal.",
+      "b) Influência de igrejas protestantes.",
+      "c) Pressão do governo revolucionário.",
+      "d) Fragilidade das oligarquias regionais.",
+      "e) Campanha de extensão da cidadania."
+    ]
+  }
+]
