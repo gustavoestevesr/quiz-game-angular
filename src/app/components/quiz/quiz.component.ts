@@ -102,7 +102,12 @@ export class QuizComponent implements OnInit, OnDestroy {
     );
     if (emblema) {
       emblema.bloqueado = false;
+      this.setEmblemasLocalStorage()
     }
+  }
+
+  setEmblemasLocalStorage() {
+    localStorage.setItem('meus-emblemas', JSON.stringify(LISTA_EMBLEMAS));
   }
 
   setResultado() {
