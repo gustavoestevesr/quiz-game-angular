@@ -1,45 +1,53 @@
 import { QuizEnum } from '../enums/QuizEnum';
 
 export interface EmblemaModel {
-  nome: string;
+  quiz: string;
   bloqueado: boolean;
   caminho: string;
+  emblema: string;
 }
 
 export const LISTA_EMBLEMAS = [
   {
-    nome: QuizEnum.DITADURA_MILITAR_BRASIL,
+    quiz: QuizEnum.DITADURA_MILITAR_BRASIL,
     bloqueado: true,
     caminho: './../../assets/emblemas/soldado.png',
+    emblema: 'Soldado',
   },
   {
-    nome: QuizEnum.ERA_VARGAS,
+    quiz: QuizEnum.ERA_VARGAS,
     bloqueado: true,
     caminho: './../../assets/emblemas/presidente.png',
+    emblema: 'Presidente',
   },
   {
-    nome: QuizEnum.FEUDALISMO,
+    quiz: QuizEnum.FEUDALISMO,
     bloqueado: true,
     caminho: './../../assets/emblemas/rei.png',
+    emblema: 'Rei',
   },
   {
-    nome: QuizEnum.REVOLUCAO_FRANCESA,
+    quiz: QuizEnum.REVOLUCAO_FRANCESA,
     bloqueado: true,
     caminho: './../../assets/emblemas/revolucao-francesa.png',
+    emblema: 'Revolução Francesa',
   },
   {
-    nome: QuizEnum.REVOLUCAO_INDUSTRIAL_1,
+    quiz: QuizEnum.REVOLUCAO_INDUSTRIAL_1,
     bloqueado: true,
     caminho: './../../assets/emblemas/fabrica.png',
+    emblema: 'Fábrica',
   },
   {
-    nome: QuizEnum.REVOLUCAO_INDUSTRIAL_2,
+    quiz: QuizEnum.REVOLUCAO_INDUSTRIAL_2,
     bloqueado: true,
     caminho: './../../assets/emblemas/braco-robotico.png',
+    emblema: 'Braço Robótico',
   },
   {
-    nome: QuizEnum.MITOLOGIA_GREGA,
+    quiz: QuizEnum.MITOLOGIA_GREGA,
     bloqueado: true,
     caminho: './../../assets/emblemas/olimpo.png',
+    emblema: 'Olimpo',
   },
 ];

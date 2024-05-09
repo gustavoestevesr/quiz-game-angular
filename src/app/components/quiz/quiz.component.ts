@@ -98,11 +98,11 @@ export class QuizComponent implements OnInit, OnDestroy {
 
   habilitarEmblema() {
     const emblema = LISTA_EMBLEMAS.find((emblema: EmblemaModel) =>
-      emblema.nome.includes(this.nomeQuiz)
+      emblema.quiz.includes(this.nomeQuiz)
     );
     if (emblema) {
       emblema.bloqueado = false;
-      this.setEmblemasLocalStorage()
+      this.setEmblemasLocalStorage();
     }
   }
 
@@ -115,7 +115,13 @@ export class QuizComponent implements OnInit, OnDestroy {
     this.mensagensResultado[1] = `Tempo de duração: ${this.formatarTemporizador(
       this.TEMPO_LIMITE - this.tempoRestante
     )}.`;
-    this.mensagensResultado[2] = `Conquistas desbloqueadas: <- SOLDADO ->.`;
+
+    const emblema = LISTA_EMBLEMAS.find((emblema: EmblemaModel) =>
+      emblema.quiz.includes(this.nomeQuiz)
+    );
+    if (emblema) {
+      this.mensagensResultado[2] = `Conquistas desbloqueadas: <a [href]="emblema.emblema">${emblema.emblema}</a>`;
+    }
   }
 
   checkAnswer(option: string) {
