@@ -3,23 +3,21 @@
     <span>HisthoryGame</span>
   </section>
 
-  <section class="router-links flex flex-wrap justify-center items-center gap-4">
-    <button mat-button class="text-base" (click)="router.navigate(['inicio'])">Inicio</button>
-    <button mat-button class="text-base" (click)="router.navigate(['emblemas'])">Emblemas</button>
-    <button mat-button class="text-base" (click)="router.navigate(['ranking'])">Ranking</button>
-    <button mat-button class="text-base" (click)="router.navigate(['autores'])">Autores</button>
-    <button mat-button class="text-base" (click)="router.navigate(['sobre'])">Sobre</button>
-  </section>
+  <ng-container *ngIf="isMobile; else toolbarMenu">
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu"> <mat-icon> menu </mat-icon> </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let link of menuLinks" (click)="router.navigate([link.route])">{{ link.label }}</button>
+      <button mat-menu-item (click)="router.navigate([''])">Sair</button>
+    </mat-menu>
+  </ng-container>
 
-  <span class="toolbar-spacer"></span>
-
-  <button
-    mat-icon-button
-    class="icon"
-    aria-label="exit_to_app"
-    matTooltip="Sair"
-    (click)="router.navigate([''])"
-  >
-    <mat-icon>exit_to_app</mat-icon>
-  </button>
+  <ng-template #toolbarMenu>
+    <span class="toolbar-spacer"></span>
+    <section class="router-links flex flex-wrap justify-center items-center gap-4">
+      <button mat-button *ngFor="let link of menuLinks" (click)="router.navigate([link.route])">{{ link.label }}</button>
+    </section>
+    <span class="toolbar-spacer"></span>
+    <button mat-button (click)="router.navigate([''])">Sair</button>
+  </ng-template>
 </mat-toolbar>
