@@ -1,6 +1,21 @@
-# QuizGameAngular
+# 📚 QuizGameAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+Bem-vindo ao HisyhoryGame, um projeto desenvolvido em Angular com o objetivo de tornar o aprendizado de fatos históricos mais interativo e envolvente. Este aplicativo oferece quizzes sobre temas históricos, promovendo a aquisição de conhecimento de maneira divertida e motivadora, ideal para estudantes e amantes de história!
+
+## 🎯 Funcionalidades
+
+- **Quiz Interativo** 📚  
+  Um quiz dinâmico e envolvente, repleto de perguntas sobre fatos históricos para testar e expandir o conhecimento dos usuários.
+
+- **Sistema de Emblemas de Conquista** 🏆  
+  Usuários ganham emblemas ao atingir certos marcos e completar desafios, incentivando o progresso e a motivação para continuar aprendendo.
+
+- **Feedback Imediato** ✅  
+  Após cada resposta, o usuário recebe um feedback indicando se a resposta está correta ou incorreta, promovendo um aprendizado mais eficaz e imediato.
+
+- **Ranking de Pontuação** 📊  
+  Um sistema de classificação global permite que os usuários comparem seus resultados com outros participantes.
+
 
 ## Development server
 
